@@ -1,0 +1,633 @@
+/*====================================================
+COMPONENTS.CSS
+Reusable Premium Components
+====================================================*/
+
+/*===============
+GLASS CARD
+================*/
+
+.glass-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:25px;
+    padding:30px;
+    transition:.35s;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.glass-card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.12);
+}
+
+/*===============
+SECTION HEADINGS
+================*/
+
+.section-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-heading h2{
+    font-size:3rem;
+    font-weight:700;
+    margin:15px 0;
+}
+
+.section-heading p{
+    max-width:700px;
+    margin:auto;
+    color:#bcd6e7;
+    line-height:1.8;
+}
+
+/*===============
+PRODUCT CARD
+================*/
+
+.product-card{
+
+    background:#0d2030;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    height:100%;
+
+    position:relative;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,180,255,.25);
+
+}
+
+.product-image{
+
+    height:250px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.product-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.product-badge{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:#00d2ff;
+
+    color:white;
+
+    padding:7px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.product-content{
+
+    padding:25px;
+
+}
+
+.product-category{
+
+    color:#00d2ff;
+
+    font-size:14px;
+
+}
+
+.product-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin:12px 0;
+
+}
+
+.product-rating{
+
+    color:#ffc107;
+
+    margin-bottom:18px;
+
+}
+
+.product-price{
+
+    font-size:28px;
+
+    color:#00ffc6;
+
+    font-weight:700;
+
+}
+
+.old-price{
+
+    font-size:18px;
+
+    color:#8ca6b7;
+
+    text-decoration:line-through;
+
+    margin-left:10px;
+
+}
+
+.product-actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.product-actions button{
+
+    flex:1;
+
+}
+
+/*===============
+AI CARD
+================*/
+
+.ai-card{
+
+    background:linear-gradient(
+        180deg,
+        rgba(18,37,55,.95),
+        rgba(11,27,41,.95)
+    );
+
+    border-radius:25px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ai-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:#00d2ff22;
+
+    border-radius:50%;
+
+    top:-60px;
+
+    right:-60px;
+
+}
+
+.ai-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,180,255,.25);
+
+}
+
+.ai-icon{
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    background:linear-gradient(
+        45deg,
+        #00d2ff,
+        #0077ff
+    );
+
+    margin-bottom:25px;
+
+}
+
+.ai-card h4{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.ai-card p{
+
+    color:#bfd8e7;
+
+    margin-bottom:30px;
+
+}
+
+.ai-card button{
+
+    width:100%;
+
+}
+
+/*===============
+TEAM CARD
+================*/
+
+.team-card{
+
+    background:#102333;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.team-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.team-info{
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.team-info h4{
+
+    margin-bottom:8px;
+
+}
+
+.team-info span{
+
+    color:#00d2ff;
+
+}
+
+/*===============
+STAT CARD
+================*/
+
+.stat-card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.stat-card h2{
+
+    font-size:50px;
+
+    color:#00ffc6;
+
+}
+
+.stat-card p{
+
+    color:#b8d5e5;
+
+}
+
+/*===============
+CHATBOT WINDOW
+================*/
+
+.chat-window{
+
+    position:fixed;
+
+    bottom:110px;
+
+    right:30px;
+
+    width:380px;
+
+    height:620px;
+
+    background:#08131f;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:none;
+
+    flex-direction:column;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    z-index:99999;
+
+}
+
+.chat-header{
+
+    background:linear-gradient(
+        45deg,
+        #00d2ff,
+        #0077ff
+    );
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.chat-header h5{
+
+    margin:0;
+
+}
+
+.chat-body{
+
+    flex:1;
+
+    padding:20px;
+
+    overflow-y:auto;
+
+}
+
+.chat-message{
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    margin-bottom:15px;
+
+    max-width:80%;
+
+    line-height:1.6;
+
+}
+
+.bot{
+
+    background:#13344c;
+
+}
+
+.user{
+
+    margin-left:auto;
+
+    background:#00d2ff;
+
+}
+
+.chat-footer{
+
+    padding:18px;
+
+    background:#0d2030;
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.chat-footer input{
+
+    flex:1;
+
+    background:#152c3d;
+
+    border:none;
+
+    color:white;
+
+    border-radius:40px;
+
+    padding:14px 18px;
+
+}
+
+.chat-footer input:focus{
+
+    outline:none;
+
+}
+
+.chat-footer button{
+
+    width:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#00d2ff;
+
+    color:white;
+
+}
+
+/*===============
+MODAL
+================*/
+
+.modal-content{
+
+    background:#08141f;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.modal-header{
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.modal-footer{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/*===============
+FORMS
+================*/
+
+.form-control,
+.form-select{
+
+    background:#132838;
+
+    border:none;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    background:#183247;
+
+    color:white;
+
+    box-shadow:0 0 0 .2rem rgba(0,210,255,.25);
+
+}
+
+/*===============
+BADGES
+================*/
+
+.custom-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#00d2ff22;
+
+    color:#00d2ff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/*===============
+LOADING SPINNER
+================*/
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border:6px solid rgba(255,255,255,.1);
+
+    border-top-color:#00d2ff;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}

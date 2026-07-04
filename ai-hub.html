@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AquaHarvest AI Hub</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+<style>
+
+body{
+background:#07131a;
+color:white;
+font-family:Poppins;
+}
+
+.ai-container{
+padding:120px 20px 60px;
+}
+
+.glass{
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(12px);
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+padding:20px;
+}
+
+.upload-box{
+border:2px dashed #00ffb3;
+padding:30px;
+text-align:center;
+cursor:pointer;
+border-radius:15px;
+}
+
+.upload-box:hover{
+background:rgba(0,255,179,0.05);
+}
+
+.btn-ai{
+background:#00ffb3;
+color:#000;
+font-weight:bold;
+}
+
+.preview-img{
+width:100%;
+border-radius:12px;
+margin-top:10px;
+}
+
+.result-box{
+margin-top:15px;
+padding:15px;
+border-radius:12px;
+background:rgba(0,0,0,0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+    <!--================ NAVBAR ================-->
+
+<nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold text-white" href="#">
+            <i class="bi bi-water"></i>
+            AquaHarvest
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <i class="bi bi-list text-white fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ai-hub.html">AI Hub</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="market.html">Marketplace</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+
+                <a href="cart.html" class="icon-btn position-relative">
+
+                    <i class="bi bi-cart3"></i>
+
+                    <span class="badge rounded-pill bg-success" id="cartCount">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="ai-container container">
+
+<h1 class="text-center mb-5">🌊 AI Diagnostic Hub</h1>
+
+<div class="row g-4">
+
+<!-- =========================
+FISH DISEASE AI
+========================= -->
+
+<div class="col-md-6">
+
+<div class="glass">
+
+<h3>🐟 Fish Disease Diagnostic AI</h3>
+
+<div class="upload-box mt-3" id="fishDrop">
+
+<input type="file" id="fishFile" hidden accept="image/*">
+
+<i class="bi bi-cloud-upload fs-1"></i>
+<p>Click to upload fish image</p>
+
+</div>
+
+<div id="fishPreview"></div>
+
+<button class="btn btn-ai w-100 mt-3" id="runFishAI">
+Run Diagnosis
+</button>
+
+<div id="fishResult" class="result-box"></div>
+
+</div>
+
+</div>
+
+<!-- =========================
+POND CALCULATOR
+========================= -->
+
+<div class="col-md-6">
+
+<div class="glass">
+
+<h3>💧 Pond Ecosystem AI</h3>
+
+<input id="pondVolume" class="form-control mt-2" placeholder="Pond Volume (Liters)">
+<input id="fishCount" class="form-control mt-2" placeholder="Fish Count">
+
+<select id="fishType" class="form-control mt-2">
+<option value="low">Low Density</option>
+<option value="high">High Density</option>
+</select>
+
+<button class="btn btn-primary w-100 mt-3" id="runCalc">
+Calculate
+</button>
+
+<div id="pondResult" class="result-box"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/ai.js"></script>
+
+</body>
+</html>

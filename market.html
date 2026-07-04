@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AquaHarvest | Marketplace</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/market.css">
+
+</head>
+
+<body>
+
+<!--======================
+Page Loader
+=======================-->
+
+<div id="pageLoader">
+
+    <div class="loader"></div>
+
+</div>
+
+<!--======================
+Progress Bar
+=======================-->
+
+<div id="progressBar"></div>
+
+<!--======================
+Navbar
+=======================-->
+
+<nav class="navbar navbar-expand-lg fixed-top glass-nav">
+
+    <div class="container">
+
+        <a class="navbar-brand text-white fw-bold" href="index.html">
+
+            <i class="bi bi-water"></i>
+
+            AquaHarvest
+
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar">
+
+            <i class="bi bi-list text-white fs-2"></i>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+
+                    <a href="index.html" class="nav-link">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="about.html" class="nav-link">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="ai-hub.html" class="nav-link">
+
+                        AI Hub
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="market.html" class="nav-link active">
+
+                        Marketplace
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="contact.html" class="nav-link">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <div class="d-flex align-items-center gap-3">
+
+
+                </button>
+
+                <a href="cart.html"
+                    class="icon-btn position-relative">
+
+                    <i class="bi bi-cart3"></i>
+
+                    <span
+                        class="badge bg-success rounded-pill"
+                        id="cartCount">
+
+                        0
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!--======================
+Hero
+=======================-->
+
+<section class="hero-section">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="hero-video">
+
+        <source
+            src="assets/videos/market.mp4"
+            type="video/mp4">
+
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="row min-vh-100 align-items-center">
+
+            <div class="col-lg-7">
+
+                <span class="hero-tag">
+
+                    Premium Marketplace
+
+                </span>
+
+                <h1 class="display-2 fw-bold mt-4">
+
+                    Smart Aquaculture
+
+                    Marketplace
+
+                </h1>
+
+                <p class="lead mt-4">
+
+                    Buy premium fish feed, medicines,
+                    aerators, sensors,
+                    smart AI devices,
+                    water testing kits,
+                    shrimp products,
+                    farming accessories
+                    and much more.
+
+                </p>
+
+                <div class="hero-buttons mt-5">
+
+                    <a href="#products"
+                        class="btn btn-primary btn-lg">
+
+                        Shop Now
+
+                    </a>
+
+                    <a href="cart.html"
+                        class="btn btn-outline-light btn-lg">
+
+                        View Cart
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================
+Marketplace Search
+=======================-->
+
+<section
+    id="products"
+    class="section-space">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-title">
+
+                Marketplace
+
+            </span>
+
+            <h2>
+
+                Shop Premium Products
+
+            </h2>
+
+            <p>
+
+                Discover high-quality aquaculture equipment,
+                fish feed,
+                medicines,
+                AI devices
+                and smart farming solutions.
+
+            </p>
+
+        </div>
+
+        <div class="glass-card mb-5">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+
+                    <div class="input-group">
+
+                        <span class="input-group-text bg-transparent border-0 text-info">
+
+                            <i class="bi bi-search"></i>
+
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            class="form-control"
+                            placeholder="Search products...">
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <select
+                        class="form-select"
+                        id="categoryFilter">
+
+                        <option value="All">
+
+                            All Categories
+
+                        </option>
+
+                        <option value="Feed">
+
+                            Fish Feed
+
+                        </option>
+
+                        <option value="Medicine">
+
+                            Medicines
+
+                        </option>
+
+                        <option value="Equipment">
+
+                            Equipment
+
+                        </option>
+
+                        <option value="Sensors">
+
+                            Sensors
+
+                        </option>
+
+                        <option value="Water">
+
+                            Water Testing
+
+                        </option>
+
+                        <option value="AI Devices">
+
+                            AI Devices
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-lg-2">
+
+                    <select
+                        id="sortProducts"
+                        class="form-select">
+
+                        <option>
+
+                            Sort By
+
+                        </option>
+
+                        <option>
+
+                            Price Low
+
+                        </option>
+
+                        <option>
+
+                            Price High
+
+                        </option>
+
+                        <option>
+
+                            Rating
+
+                        </option>
+
+                        <option>
+
+                            Newest
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-lg-2 d-grid">
+
+                    <button
+                        class="btn btn-primary">
+
+                        <i class="bi bi-funnel-fill"></i>
+
+                        Filter
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Products Grid Starts Here -->
+
+        <div
+            class="row"
+            id="productGrid">
+
+            <!-- Products generated dynamically -->
+
+        </div>
+        
+        <!--=========================
+        Featured Deals
+        ==========================-->
+
+        <section class="py-5">
+
+            <div class="row mb-5">
+
+                <div class="col-12">
+
+                    <div class="glass-card gradient-bg text-center">
+
+                        <h2 class="display-5 fw-bold">
+
+                            🔥 Summer Mega Sale
+
+                        </h2>
+
+                        <p class="lead my-4">
+
+                            Save up to <strong>40%</strong> on Premium Fish Feed,
+                            AI Devices, Water Sensors and Farming Equipment.
+
+                        </p>
+
+                        <button class="btn btn-light btn-lg">
+
+                            Shop Deals
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================
+        Why Shop With Us
+        ==========================-->
+
+        <section class="pb-5">
+
+            <div class="row g-4">
+
+                <div class="col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-truck"></i>
+
+                        <h4>Fast Delivery</h4>
+
+                        <p>
+
+                            Nationwide shipping with secure packaging.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-patch-check-fill"></i>
+
+                        <h4>Quality Products</h4>
+
+                        <p>
+
+                            Premium aquaculture products from trusted brands.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                        <h4>Easy Returns</h4>
+
+                        <p>
+
+                            Hassle-free replacement and return policy.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-headset"></i>
+
+                        <h4>24/7 Support</h4>
+
+                        <p>
+
+                            Expert support whenever you need assistance.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+
+<!--=========================
+Product Details Modal
+==========================-->
+
+<div
+class="modal fade"
+id="productModal"
+tabindex="-1">
+
+<div class="modal-dialog modal-xl modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-header border-0">
+
+<h4
+class="modal-title"
+id="productModalTitle">
+
+Product Name
+
+</h4>
+
+<button
+class="btn-close btn-close-white"
+data-bs-dismiss="modal">
+
+</button>
+
+</div>
+
+<div
+class="modal-body"
+id="productModalBody">
+
+<!-- Filled dynamically -->
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!--=========================
+Newsletter
+==========================-->
+
+<section class="section-space">
+
+<div class="container">
+
+<div class="glass-card text-center">
+
+<h2 class="fw-bold">
+
+Stay Updated
+
+</h2>
+
+<p class="my-4">
+
+Receive exclusive discounts,
+latest products,
+AI farming tips
+and aquaculture news.
+
+</p>
+
+<div class="row justify-content-center">
+
+<div class="col-lg-6">
+
+<div class="input-group">
+
+<input
+
+id="newsletterEmail"
+
+type="email"
+
+class="form-control"
+
+placeholder="Enter your email">
+
+<button
+
+id="newsletterBtn"
+
+class="btn btn-primary">
+
+Subscribe
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!--=========================
+Footer
+==========================-->
+
+<footer>
+
+<div class="container">
+
+<div class="row gy-5">
+
+<div class="col-lg-4">
+
+<h3 class="mb-4">
+
+<i class="bi bi-water me-2"></i>
+
+AquaHarvest
+
+</h3>
+
+<p>
+
+Empowering modern aquaculture with Artificial Intelligence,
+smart monitoring, premium marketplace,
+and intelligent farming solutions.
+
+</p>
+
+<div class="d-flex gap-3 mt-4">
+
+<a href="#" class="icon-btn">
+
+<i class="bi bi-facebook"></i>
+
+</a>
+
+<a href="#" class="icon-btn">
+
+<i class="bi bi-instagram"></i>
+
+</a>
+
+<a href="#" class="icon-btn">
+
+<i class="bi bi-linkedin"></i>
+
+</a>
+
+<a href="#" class="icon-btn">
+
+<i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="col-lg-2">
+
+<h5 class="mb-4">
+
+Company
+
+</h5>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="ai-hub.html">AI Hub</a>
+
+<a href="market.html">Marketplace</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5 class="mb-4">
+
+Marketplace
+
+</h5>
+
+<a href="#">Fish Feed</a>
+
+<a href="#">Medicines</a>
+
+<a href="#">Sensors</a>
+
+<a href="#">Equipment</a>
+
+<a href="#">AI Devices</a>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5 class="mb-4">
+
+Customer Support
+
+</h5>
+
+<p>
+
+<i class="bi bi-envelope-fill me-2"></i>
+
+support@aquaharvest.com
+
+</p>
+
+<p>
+
+<i class="bi bi-telephone-fill me-2"></i>
+
++92 300 1234567
+
+</p>
+
+<p>
+
+<i class="bi bi-geo-alt-fill me-2"></i>
+
+Karachi, Pakistan
+
+</p>
+
+</div>
+
+</div>
+
+<hr class="my-5">
+
+<div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+
+<p class="mb-0">
+
+© 2026 AquaHarvest. All Rights Reserved.
+
+</p>
+
+<div class="d-flex gap-4 mt-3 mt-lg-0">
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Terms of Service</a>
+
+<a href="#">Cookies</a>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<!--=========================
+Back To Top
+==========================-->
+
+<div id="backToTop">
+
+<i class="bi bi-arrow-up"></i>
+
+</div>
+
+<!--=========================
+Floating Chatbot
+==========================-->
+
+<div id="chatbotContainer">
+
+<button id="chatToggle">
+
+<i class="bi bi-robot"></i>
+
+</button>
+
+</div>
+
+<!--=========================
+Bootstrap JS
+==========================-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--=========================
+Application Scripts
+==========================-->
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+//=========================================
+// Product Sorting
+//=========================================
+
+const sortSelect = document.getElementById("sortProducts");
+
+if(sortSelect){
+
+sortSelect.addEventListener("change",()=>{
+
+let items=[...PRODUCTS];
+
+switch(sortSelect.value){
+
+case "Price Low":
+
+items.sort((a,b)=>a.price-b.price);
+
+break;
+
+case "Price High":
+
+items.sort((a,b)=>b.price-a.price);
+
+break;
+
+case "Rating":
+
+items.sort((a,b)=>b.rating-a.rating);
+
+break;
+
+case "Newest":
+
+items.reverse();
+
+break;
+
+default:
+
+break;
+
+}
+
+loadProducts(items);
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

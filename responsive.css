@@ -1,0 +1,604 @@
+/*==================================================
+RESPONSIVE.CSS
+AquaHarvest Responsive Layout
+==================================================*/
+
+/*==============================
+Large Desktop
+==============================*/
+
+@media (min-width:1400px){
+
+.container{
+    max-width:1320px;
+}
+
+.hero-section h1{
+    font-size:5rem;
+}
+
+.hero-section p{
+    font-size:1.3rem;
+}
+
+}
+
+/*==============================
+Laptop
+==============================*/
+
+@media (max-width:1200px){
+
+.hero-section h1{
+    font-size:58px;
+}
+
+.hero-stats{
+    gap:35px;
+}
+
+.product-image{
+    height:220px;
+}
+
+.ai-card{
+    padding:30px;
+}
+
+.chat-window{
+    width:360px;
+}
+
+}
+
+/*==============================
+Tablet Landscape
+==============================*/
+
+@media (max-width:992px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+.navbar-collapse{
+
+    background:#07131d;
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+.nav-link{
+
+    margin:10px 0;
+
+}
+
+/* Hero */
+
+.hero-section{
+
+    text-align:center;
+
+    height:auto;
+
+    padding:140px 0 90px;
+
+}
+
+.hero-section h1{
+
+    font-size:48px;
+
+}
+
+.hero-section p{
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-stats{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+.floating-dashboard{
+
+    margin-top:60px;
+
+}
+
+.section-space{
+
+    padding:90px 0;
+
+}
+
+.ai-preview{
+
+    text-align:center;
+
+}
+
+.ai-preview img{
+
+    margin-bottom:50px;
+
+}
+
+.cta-section h2{
+
+    font-size:45px;
+
+}
+
+footer{
+
+    text-align:center;
+
+}
+
+footer a{
+
+    padding:6px 0;
+
+}
+
+.chat-window{
+
+    width:340px;
+
+    height:560px;
+
+}
+
+}
+
+/*==============================
+Tablet Portrait
+==============================*/
+
+@media (max-width:768px){
+
+.hero-section{
+
+    padding-top:130px;
+
+}
+
+.hero-section h1{
+
+    font-size:40px;
+
+}
+
+.hero-section p{
+
+    font-size:17px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero-buttons .btn{
+
+    width:100%;
+
+    max-width:320px;
+
+}
+
+.hero-stats{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero-stats div{
+
+    width:100%;
+
+}
+
+.section-heading h2{
+
+    font-size:2.3rem;
+
+}
+
+.feature-card{
+
+    padding:30px;
+
+}
+
+.product-card{
+
+    margin-bottom:25px;
+
+}
+
+.product-title{
+
+    font-size:20px;
+
+}
+
+.product-actions{
+
+    flex-direction:column;
+
+}
+
+.ai-card{
+
+    text-align:center;
+
+}
+
+.ai-icon{
+
+    margin:auto auto 20px;
+
+}
+
+.cta-section{
+
+    padding:90px 20px;
+
+}
+
+.cta-section h2{
+
+    font-size:36px;
+
+}
+
+.chat-window{
+
+    right:15px;
+
+    bottom:90px;
+
+    width:330px;
+
+    max-width:calc(100vw - 30px);
+
+}
+
+#chatToggle{
+
+    width:65px;
+
+    height:65px;
+
+}
+
+}
+
+/*==============================
+Mobile
+==============================*/
+
+@media (max-width:576px){
+
+.container{
+
+    padding-left:18px;
+
+    padding-right:18px;
+
+}
+
+.navbar-brand{
+
+    font-size:24px;
+
+}
+
+.icon-btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.theme-btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.hero-section{
+
+    min-height:100vh;
+
+    padding-top:120px;
+
+}
+
+.hero-section h1{
+
+    font-size:34px;
+
+    line-height:1.25;
+
+}
+
+.hero-section p{
+
+    font-size:16px;
+
+}
+
+.hero-tag{
+
+    font-size:13px;
+
+}
+
+.section-title{
+
+    font-size:12px;
+
+}
+
+.display-5{
+
+    font-size:2rem !important;
+
+}
+
+.feature-card{
+
+    padding:28px 22px;
+
+}
+
+.feature-card i{
+
+    font-size:42px;
+
+}
+
+.product-image{
+
+    height:210px;
+
+}
+
+.product-content{
+
+    padding:20px;
+
+}
+
+.product-title{
+
+    font-size:19px;
+
+}
+
+.product-price{
+
+    font-size:24px;
+
+}
+
+.ai-card{
+
+    padding:25px;
+
+}
+
+.ai-card h4{
+
+    font-size:21px;
+
+}
+
+.ai-icon{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:30px;
+
+}
+
+.glass-card{
+
+    padding:24px;
+
+}
+
+.stat-card{
+
+    padding:28px;
+
+}
+
+.stat-card h2{
+
+    font-size:36px;
+
+}
+
+.chat-window{
+
+    width:calc(100vw - 20px);
+
+    right:10px;
+
+    left:10px;
+
+    bottom:90px;
+
+    height:72vh;
+
+    border-radius:20px;
+
+}
+
+.chat-header{
+
+    padding:15px;
+
+}
+
+.chat-body{
+
+    padding:15px;
+
+}
+
+.chat-footer{
+
+    padding:12px;
+
+}
+
+.chat-footer input{
+
+    font-size:14px;
+
+}
+
+#chatToggle{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:24px;
+
+    right:18px;
+
+    bottom:18px;
+
+}
+
+#backToTop{
+
+    width:50px;
+
+    height:50px;
+
+    right:18px;
+
+    bottom:90px;
+
+}
+
+footer{
+
+    padding:60px 0 20px;
+
+}
+
+}
+
+/*==============================
+Small Phones
+==============================*/
+
+@media (max-width:380px){
+
+.hero-section h1{
+
+    font-size:29px;
+
+}
+
+.hero-section p{
+
+    font-size:15px;
+
+}
+
+.hero-buttons .btn{
+
+    font-size:15px;
+
+    padding:14px 22px;
+
+}
+
+.product-image{
+
+    height:180px;
+
+}
+
+.product-title{
+
+    font-size:17px;
+
+}
+
+.product-price{
+
+    font-size:22px;
+
+}
+
+.chat-window{
+
+    height:75vh;
+
+}
+
+}
+
+/*==============================
+Landscape Phones
+==============================*/
+
+@media (max-height:500px) and (orientation:landscape){
+
+.hero-section{
+
+    height:auto;
+
+    padding:120px 0 60px;
+
+}
+
+.chat-window{
+
+    height:90vh;
+
+}
+
+}
